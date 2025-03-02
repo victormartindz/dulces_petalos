@@ -12,12 +12,14 @@
 }
 
 .logo {
-  width: 100px;
+  width: 75px;
   height: auto;
+  margin-right: 30px;
   filter: drop-shadow(0 0 2em #646cffaa);
 }
 
 .title {
+  margin: 0;
   font-family: 'Dancing Script', cursive;
   font-size: 3em;
   color: #fff;
