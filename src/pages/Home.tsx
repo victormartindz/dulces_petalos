@@ -6,7 +6,6 @@ export default function Home() {
 
   return (
     <div>
-      <h2>Lista de Productos</h2>
       <ProductList products={products} />
     </div>
   );
