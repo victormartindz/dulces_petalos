@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
+import Fuse from 'fuse.js';
 import ProductGrid from '../ProductGrid/ProductGrid';
 import styles from './ProductList.module.css';
 import { Product } from '../../types/product';
@@ -10,11 +11,21 @@ interface ProductListProps {
 export default function ProductList({ products }: ProductListProps) {
   const [search, setSearch] = useState('');
 
-  const filteredProducts = products.filter(
-    (product) =>
-      product.name.toLowerCase().includes(search.toLowerCase()) ||
-      product.scientificName.toLowerCase().includes(search.toLowerCase())
-  );
+  const fuse = useMemo(() => {
+    return new Fuse(products, {
+      keys: ['name', 'scientificName'],
+      includeScore: true,
+      threshold: 0.4,
+    });
+  }, [products]);
+
+  const filteredProducts = useMemo(() => {
+    if (!search.trim()) {
+      return products;
+    }
+    const result = fuse.search(search);
+    return result.map((resultItem) => resultItem.item);
+  }, [search, fuse, products]);
 
   return (
     <div className={styles.container}>
