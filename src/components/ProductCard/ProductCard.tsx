@@ -2,22 +2,22 @@ import styles from './ProductCard.module.css';
 
 interface ProductCardProps {
   name: string;
-  scientificName: string;
+  binomialName: string;
   price: number;
-  imageUrl: string;
+  imgUrl: string;
 }
 
 export default function ProductCard({
   name,
-  scientificName,
+  binomialName,
   price,
-  imageUrl,
+  imgUrl,
 }: ProductCardProps) {
   return (
     <div className={styles.card}>
-      <img src={imageUrl} alt={name} className={styles.image} />
+      <img src={imgUrl} alt={name} className={styles.image} />
       <h2>{name}</h2>
-      <p>{scientificName}</p>
+      <p>{binomialName}</p>
       <p>${price}</p>
     </div>
   );

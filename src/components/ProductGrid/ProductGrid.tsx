@@ -18,9 +18,9 @@ export default function ProductGrid({ products }: ProductGridProps) {
         >
           <ProductCard
             name={product.name}
-            scientificName={product.scientificName}
+            binomialName={product.binomialName}
             price={product.price}
-            imageUrl={product.imageUrl}
+            imgUrl={product.imgUrl}
           />
         </Link>
       ))}

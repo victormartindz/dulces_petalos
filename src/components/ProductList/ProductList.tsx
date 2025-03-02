@@ -13,7 +13,7 @@ export default function ProductList({ products }: ProductListProps) {
 
   const fuse = useMemo(() => {
     return new Fuse(products, {
-      keys: ['name', 'scientificName'],
+      keys: ['name', 'binomialName'],
       includeScore: true,
       threshold: 0.4,
     });
