@@ -1,14 +1,14 @@
 import React from 'react';
 import styles from './Header.module.css';
-import reactLogo from '../../assets/images/react.svg';
+import logo from '../../assets/images/blossom-cherry.svg';
 
 const Header: React.FC = () => {
   return (
     <header className={styles.header}>
-      <a href='https://react.dev' target='_blank'>
-        <img src={reactLogo} className='logo' alt='React logo' />
-      </a>
-      <h1 className='title'>Dulces Pétalos</h1>
+      <div className={styles.logoContainer}>
+        <img src={logo} className={styles.logo} alt='Cherry Blossom logo' />
+      </div>
+      <h1 className={styles.title}>Dulces Pétalos</h1>
     </header>
   );
 };
