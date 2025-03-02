@@ -1,10 +1,10 @@
 export interface Product {
   id: string;
   name: string;
-  scientificName: string;
+  binomialName: string;
   price: number;
-  imageUrl: string;
-  waterPerWeek: number;
-  fertilizer: string;
-  height: number;
+  imgUrl: string;
+  wateringsPerWeek: number;
+  fertilizerType: string;
+  heightInCm: number;
 }

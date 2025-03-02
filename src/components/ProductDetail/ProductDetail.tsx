@@ -20,27 +20,23 @@ export default function ProductDetail({ products }: ProductDetailProps) {
         Volver
       </button>
       <div className={styles.container}>
-        <img
-          src={product.imageUrl}
-          alt={product.name}
-          className={styles.image}
-        />
+        <img src={product.imgUrl} alt={product.name} className={styles.image} />
         <div className={styles.description}>
           <h2>{product.name}</h2>
           <p>
-            <strong>Nombre científico:</strong> {product.scientificName}
+            <strong>Nombre científico:</strong> {product.binomialName}
           </p>
           <p>
             <strong>Precio:</strong> ${product.price}
           </p>
           <p>
-            <strong>Riegos por semana:</strong> {product.waterPerWeek}
+            <strong>Riegos por semana:</strong> {product.wateringsPerWeek}
           </p>
           <p>
-            <strong>Fertilizante recomendado:</strong> {product.fertilizer}
+            <strong>Fertilizante recomendado:</strong> {product.fertilizerType}
           </p>
           <p>
-            <strong>Altura:</strong> {product.height} cm
+            <strong>Altura:</strong> {product.heightInCm} cm
           </p>
         </div>
       </div>
