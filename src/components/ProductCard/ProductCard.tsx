@@ -1,10 +1,10 @@
 import styles from './ProductCard.module.css';
 
 interface ProductCardProps {
-  name: string;
-  binomialName: string;
-  price: number;
-  imgUrl: string;
+  readonly name: string;
+  readonly binomialName: string;
+  readonly price: number;
+  readonly imgUrl: string;
 }
 
 export default function ProductCard({

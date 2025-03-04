@@ -5,8 +5,8 @@ export default function Home() {
   const products = useProducts();
 
   return (
-    <div>
+    <main>
       <ProductList products={products} />
-    </div>
+    </main>
   );
 }
